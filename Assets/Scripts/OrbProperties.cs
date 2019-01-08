@@ -9,6 +9,7 @@ public class OrbProperties : MonoBehaviour {
     public float Expo;
     private Renderer X;
     public ParticleSystem y;
+    public ParticleSystem Z;
     public float revive;
     public float settime = 5f;
 
@@ -32,12 +33,14 @@ public class OrbProperties : MonoBehaviour {
         {
             X.enabled = false;
             y.Stop();
+            Z.Play();
         }
     }
     void Revive()
     {
         X.enabled = true;
         y.Play();
+        Z.Stop();
         revive = settime;
     }
 }
