@@ -12,10 +12,10 @@ public class PsRibbon : MonoBehaviour {
         {
             MasterGameobject.changeTint(other.GetComponent<Psorbproperties>().Tintset);
             //Debug.Log(other.GetComponent<OrbProperties>().Tintset);
-            MasterGameobject.changeFloor(other.GetComponent<Psorbproperties>().Groundset);
-            //Debug.Log(other.GetComponent<OrbProperties>().Groundset);
-            MasterGameobject.changeExpo(other.GetComponent<Psorbproperties>().Expo);
-            //Debug.Log(other.GetComponent<OrbProperties>().Expo);
+            //MasterGameobject.changeFloor(other.GetComponent<Psorbproperties>().Groundset);
+            ////Debug.Log(other.GetComponent<OrbProperties>().Groundset);
+            //MasterGameobject.changeExpo(other.GetComponent<Psorbproperties>().Expo);
+            ////Debug.Log(other.GetComponent<OrbProperties>().Expo);
         }
     }
 }

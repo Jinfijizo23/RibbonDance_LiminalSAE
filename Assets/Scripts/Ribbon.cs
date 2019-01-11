@@ -12,9 +12,9 @@ public class Ribbon : MonoBehaviour {
         {
             MasterGameobject.changeTint(other.GetComponent<OrbProperties>().Tintset);
             //Debug.Log(other.GetComponent<OrbProperties>().Tintset);
-            MasterGameobject.changeFloor(other.GetComponent<OrbProperties>().Groundset);
+            //MasterGameobject.changeFloor(other.GetComponent<OrbProperties>().Groundset);
             //Debug.Log(other.GetComponent<OrbProperties>().Groundset);
-            MasterGameobject.changeExpo(other.GetComponent<OrbProperties>().Expo);
+            //MasterGameobject.changeExpo(other.GetComponent<OrbProperties>().Expo);
             //Debug.Log(other.GetComponent<OrbProperties>().Expo);
         }
     }

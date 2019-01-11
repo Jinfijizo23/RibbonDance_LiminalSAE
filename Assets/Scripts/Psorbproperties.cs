@@ -5,8 +5,8 @@ using UnityEngine;
 public class Psorbproperties : MonoBehaviour {
 
     public Color Tintset;
-    public Color Groundset;
-    public float Expo;
+    //public Color Groundset;
+    //public float Expo;
     private ParticleSystem X;
     private Renderer y;
     public float revive;
