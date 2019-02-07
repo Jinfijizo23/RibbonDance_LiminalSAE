@@ -5,18 +5,14 @@ using UnityEngine;
 public class OrbProperties : MonoBehaviour {
 
     public Color Tintset;
-    //public Color Groundset;
-    //public float Expo;
     private Renderer X;
     public ParticleSystem y;
     public ParticleSystem Z;
-    //public float revive;
-    //public float settime = 5f;
     private float speed = 2.5f;
     Collider H;
     Color Alpha;
     float f = 0.05f;
-    public float count = 10.0f;
+    float count = 60.0f;
 
 
     void Start()
@@ -29,8 +25,6 @@ public class OrbProperties : MonoBehaviour {
         Alpha.a = 0f;
         X.material.color = Alpha;
         StartCoroutine("FadeIn");
-
-        //revive = settime;
     }
     void Update()
     {
@@ -46,13 +40,6 @@ public class OrbProperties : MonoBehaviour {
             Destroy(gameObject,1);
         }
     }
-    //void Revive()
-    //{
-    //    //X.enabled = true;
-    //    y.Play();
-    //    Z.Stop();
-    //    revive = settime;
-    //}
     IEnumerator FadeIn()
     {
         while (f <= 1.0f)

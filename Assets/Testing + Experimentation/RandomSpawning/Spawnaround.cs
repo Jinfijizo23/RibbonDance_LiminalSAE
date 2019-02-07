@@ -14,14 +14,11 @@ public class Spawnaround : MonoBehaviour {
 
     int randobject;
 
-
-    // Use this for initialization
     void Start()
     {
         StartCoroutine(waitSpawner());
     }
 
-    // Update is called once per frame
     void Update()
     {
         SpawnWait = Random.Range(SpawnLeastWait, SpawnMostWait);
