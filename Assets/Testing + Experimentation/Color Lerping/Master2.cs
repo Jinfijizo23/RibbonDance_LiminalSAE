@@ -10,7 +10,6 @@ public class Master2 : MonoBehaviour
     public Tp2 Change;
     public GameObject Hunter;
 
-    public float speed = 0.01f;
     public Color CurrentColor;
     public Color NewColor;
     private float starttime;
@@ -23,23 +22,44 @@ public class Master2 : MonoBehaviour
         CurrentColor = Victim.GetComponent<Renderer>().material.color;      
         starttime = Time.time;
     }
-    // void Update()
-    //{
-    //    t = (Time.time - starttime) * speed;
-    //    R.material.color = Color.Lerp(CurrentColor, NewColor, t);
-    //    Debug.Log("Current Color = " + CurrentColor);
-    //}
 
     public void changecolor(Color cl)
     {
         NewColor = cl;
         StartCoroutine(ChangeNew());
     }
-
+    //IEnumerator ChangeNew()
+    //{
+    //    Debug.Log("Commence change");
+    //    while (t <= 1.0f)
+    //    {
+    //        t += 0.1f * Time.deltaTime;
+    //        Debug.Log("t = " + t);
+    //    }
+    //    R.material.color = Color.Lerp(CurrentColor, NewColor, t);
+    //    yield return new WaitForSeconds(5.0f);
+    //        t = 0.0f;
+    //        CurrentColor = NewColor;
+    //        Debug.Log("change complete");     
+    //}
     IEnumerator ChangeNew()
     {
-        t = (Time.time - starttime) * speed;
-        R.material.color = Color.Lerp(CurrentColor, NewColor, t);
-        yield return null;
+        //Debug.Log("Staring co-routine LerpSkybox");
+        t = 0.0f;
+        Color Nextcolor = NewColor;
+        Color currentSkyTint = CurrentColor;
+
+        while (t < 1.0f)
+        {
+            //
+            t += 0.3f * Time.deltaTime;
+            //Debug.Log(t);
+            //
+            CurrentColor = Color.Lerp(currentSkyTint, Nextcolor, t);
+            //Debug.Log(CurrentColor);
+            yield return null;
+        }
+
+        //print("LerpSkybox is now finished.");
     }
 }

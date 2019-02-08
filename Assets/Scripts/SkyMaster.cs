@@ -4,14 +4,29 @@ using UnityEngine;
 
 public class SkyMaster : MonoBehaviour {
 
+    public Color Nextcolor;
     public GameObject MasterObject;
     public GameObject Hunter;
 
     public void changeTint(Color ST)
     {
+        Nextcolor = ST;
+        StartCoroutine(nowchanging());
+    }
+    IEnumerator nowchanging()
+    {
+        float t = 0.0f;
         if (RenderSettings.skybox.HasProperty("_Tint"))
         {
-            RenderSettings.skybox.SetColor("_Tint", ST);
+            Color Currentcolor = RenderSettings.skybox.GetColor("_Tint");
+            while (t < 1.0f)
+            {
+                t += 0.1f * Time.deltaTime;
+                Debug.Log(t);
+                RenderSettings.skybox.SetColor("_Tint", Color.Lerp(Currentcolor, Nextcolor,t));
+            }
         }
+        yield return null;
+       // Debug.Log("Sky Changed");
     }
 }

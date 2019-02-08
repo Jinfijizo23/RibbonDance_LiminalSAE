@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.5023373, g: 0.29372445, b: 0.86404926, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -397,8 +397,7 @@ MonoBehaviour:
   Victim: {fileID: 1591394796}
   Change: {fileID: 60895782}
   Hunter: {fileID: 1563225714}
-  speed: 1
-  CurrentColor: {r: 1, g: 1, b: 1, a: 1}
+  CurrentColor: {r: 0, g: 0, b: 0, a: 1}
   NewColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1163540596
 Transform:

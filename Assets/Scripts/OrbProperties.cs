@@ -52,9 +52,9 @@ public class OrbProperties : MonoBehaviour {
         }
         H.enabled = true;
         y.Play();
-        Debug.Log("Object Complete");
+        //Debug.Log("Object Complete");
         yield return new WaitForSeconds(count);
-        Debug.Log("Thanos snapped his fingers");
+       // Debug.Log("Thanos snapped his fingers");
         StartCoroutine(FadeOut());
     }
     IEnumerator FadeOut()
@@ -69,7 +69,7 @@ public class OrbProperties : MonoBehaviour {
             yield return new WaitForSeconds(0.05f);
         }
         yield return null;
-        Debug.Log("He Won");
+       // Debug.Log("He Won");
         Destroy(gameObject);
     }
 }
