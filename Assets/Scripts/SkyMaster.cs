@@ -24,9 +24,10 @@ public class SkyMaster : MonoBehaviour {
                 t += 0.1f * Time.deltaTime;
                 Debug.Log(t);
                 RenderSettings.skybox.SetColor("_Tint", Color.Lerp(Currentcolor, Nextcolor,t));
+                yield return null;
             }
         }
-        yield return null;
+        
        // Debug.Log("Sky Changed");
     }
 }
