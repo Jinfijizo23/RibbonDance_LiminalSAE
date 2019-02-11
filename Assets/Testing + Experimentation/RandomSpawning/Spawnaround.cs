@@ -28,7 +28,7 @@ public class Spawnaround : MonoBehaviour {
           yield return new WaitForSeconds (StartWait);  
         while(!stop)
         {
-            randobject = Random.Range(0, 3);
+            randobject = Random.Range(0, 5);
             Vector3 spawnPoint = new Vector3(Random.Range(-SpawnValues.x, SpawnValues.x), Random.Range(-SpawnValues.y, SpawnValues.y), Random.Range(-SpawnValues.z, SpawnValues.z));
             Instantiate(Prefabs[randobject],spawnPoint + transform.TransformPoint(0,0,0), gameObject.transform.rotation);
             yield return new WaitForSeconds(SpawnWait);

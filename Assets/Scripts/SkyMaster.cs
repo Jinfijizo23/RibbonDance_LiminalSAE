@@ -11,9 +11,9 @@ public class SkyMaster : MonoBehaviour {
     public void changeTint(Color ST)
     {
         Nextcolor = ST;
-        StartCoroutine(nowchanging());
+        StartCoroutine(nowchanging(Nextcolor));
     }
-    IEnumerator nowchanging()
+    IEnumerator nowchanging(Color targetcolor)
     {
         float t = 0.0f;
         if (RenderSettings.skybox.HasProperty("_Tint"))
@@ -23,7 +23,7 @@ public class SkyMaster : MonoBehaviour {
             {
                 t += 0.1f * Time.deltaTime;
                 Debug.Log(t);
-                RenderSettings.skybox.SetColor("_Tint", Color.Lerp(Currentcolor, Nextcolor,t));
+                RenderSettings.skybox.SetColor("_Tint", Color.Lerp(Currentcolor, targetcolor,t));
                 yield return null;
             }
         }
