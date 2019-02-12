@@ -8,6 +8,7 @@ public class OpeningSequence : MonoBehaviour {
 
     float fadeDuration = 3.0f;
     public Text title;
+    public Text Heading;
     public float Timeup = 3.0f;
 
     void Start()
@@ -18,10 +19,13 @@ public class OpeningSequence : MonoBehaviour {
     {
      title.canvasRenderer.SetAlpha(0);
      title.CrossFadeAlpha(1, fadeDuration, false);
+     Heading.canvasRenderer.SetAlpha(0);
+     Heading.CrossFadeAlpha(1, fadeDuration, false);
         Debug.Log("Fading in");
      yield return new WaitForSeconds(fadeDuration + Timeup);
         Debug.Log("Fading out");
      title.CrossFadeAlpha(0, fadeDuration, false);
+     Heading.CrossFadeAlpha(0, fadeDuration, false);
         yield return new WaitForSeconds(fadeDuration);
         SceneManager.LoadScene(1);
     }

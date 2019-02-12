@@ -7,6 +7,7 @@ public class FadeUI : MonoBehaviour {
 
     float fadeDuration = 10.0f;
     public Image title;
+    public Text Manual;
     public float TimeOfExperience = 300.0f;
 
     void Start()
@@ -16,9 +17,9 @@ public class FadeUI : MonoBehaviour {
     IEnumerator Sequence()
     {
         title.CrossFadeAlpha(0, fadeDuration, false);
-        Debug.Log("Fading in");
+        //Debug.Log("Fading in");
         yield return new WaitForSeconds(fadeDuration + TimeOfExperience);
-        Debug.Log("Fading out");
+        //Debug.Log("Fading out");
         title.CrossFadeAlpha(1, fadeDuration, false);
         yield return new WaitForSeconds(fadeDuration);
     }

@@ -38,12 +38,12 @@ public class Torpedo : MonoBehaviour {
         //    }
         //}
 
-        if(OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+        if(OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || Input.GetButtonDown("Jump"))
         {
             running = true;
         }
 
-        if(OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
+        if(OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger) || Input.GetButtonUp("Jump"))
         {
             running = false;
         }
